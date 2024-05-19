@@ -2,6 +2,8 @@ package net.unkzero.learningmod;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.unkzero.learningmod.item.ModItemGroups;
+import net.unkzero.learningmod.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,9 +19,9 @@ public class LearningMod implements ModInitializer {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
+		ModItemGroups.registerItemGroups();
+		ModItems.registerModItems();
 
 
-
-		LOGGER.info("Hello Fabric world!");
 	}
 }
