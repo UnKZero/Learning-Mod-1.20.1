@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "learningmod",
+	"version": "${version}",
+	"name": "Learning Mod",
+	"description": "My First Mod",
+	"authors": [
+		"UnKZero"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/learningmod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.unkzero.learningmod.LearningMod"
+		],
+		"client": [
+			"net.unkzero.learningmod.LearningModClient"
+		],
+		"fabric-datagen": [
+			"net.unkzero.learningmod.LearningModDataGenerator"
+		]
+	},
+	"mixins": [
+		"learningmod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
